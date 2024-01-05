@@ -1,11 +1,16 @@
+// Import sequelize
+import { Sequelize } from "sequelize";
+// Import necessary sapphire.js & discord.js classes
 import "@sapphire/plugin-logger/register";
 import { SapphireClient } from "@sapphire/framework";
 import { GatewayIntentBits } from "discord.js";
+// Import i18next
 import i18next from "i18next";
 import I18NexFsBackend, { FsBackendOptions } from "i18next-fs-backend";
-
+// Import .env
 import "dotenv/config";
 
+// Create a new client instance
 const client = new SapphireClient({
   intents: [
     GatewayIntentBits.Guilds,
@@ -17,6 +22,10 @@ const client = new SapphireClient({
   ],
 });
 
+// Connect to a database
+export const sequelize = new Sequelize(process.env.POSTGRES_URL as string);
+
+// Configure i18next
 i18next.use(I18NexFsBackend).init<FsBackendOptions>(
   {
     lng: process.env.LANGUAGE,
@@ -35,4 +44,5 @@ i18next.use(I18NexFsBackend).init<FsBackendOptions>(
 );
 
 client.logger.info("Running on", process.env.NODE_ENV);
+// Login to Discord with client's token
 client.login(process.env.TOKEN);
