@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.2](https://github.com/nikkoxd/stella/compare/v2.4.1...v2.4.2) (2024-03-26)
+
+
+### Bug Fixes
+
+* **listeners:** :construction: temporarily disable rewards for /bump ([4a10b20](https://github.com/nikkoxd/stella/commit/4a10b20bbb60117ca5502978d78771afda315727))
+* **listeners:** :loud_sound: add interaction logs ([96f434b](https://github.com/nikkoxd/stella/commit/96f434bbb9aae03704a937ce7031ee406b68d177))
+
 ## [2.4.1](https://github.com/nikkoxd/stella/compare/v2.4.0...v2.4.1) (2024-03-11)
 
 
