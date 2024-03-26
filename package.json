@@ -8,7 +8,7 @@
   "license": "GPL-3.0-or-later",
   "private": false,
   "dependencies": {
-    "@sapphire/framework": "^5.0.7",
+    "@sapphire/framework": "^5.0.10",
     "@sapphire/plugin-logger": "^4.0.2",
     "@sapphire/plugin-subcommands": "^6.0.3",
     "discord.js": "14.x",
