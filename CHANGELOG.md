@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.3](https://github.com/nikkoxd/stella/compare/v2.4.2...v2.4.3) (2024-06-03)
+
+
+### Bug Fixes
+
+* :bug: print out the message object properly ([6018505](https://github.com/nikkoxd/stella/commit/60185057076817ffbcda39c59091b8e10960d1f8))
+* :loud_sound: add a bit more logs ([71c84ef](https://github.com/nikkoxd/stella/commit/71c84ef7c626f8b16996e88bac842740dada641b))
+* :loud_sound: add command logs ([d9fcadd](https://github.com/nikkoxd/stella/commit/d9fcadd73cd02713f3987cd6e42c4c55cd92d81e))
+* :loud_sound: add logs ([49c27c0](https://github.com/nikkoxd/stella/commit/49c27c00abe687735244631d16d4bf87b5a21c07))
+* :loud_sound: add more interaction logs ([0b78945](https://github.com/nikkoxd/stella/commit/0b78945bf3c5c49129d490902bdc1d34700350f0))
+* :loud_sound: fix logs ([f9976ff](https://github.com/nikkoxd/stella/commit/f9976ffdb40da4a5c57a91d1a42ef13bbf190a13))
+* **listeners:** :bug: do not process system messages ([1a082d0](https://github.com/nikkoxd/stella/commit/1a082d0f27f3177fe96c5acac4d9e08abde1ada0))
+* **listeners:** :bug: fix bump command not being processed ([712cd34](https://github.com/nikkoxd/stella/commit/712cd34c689870b1abff5ff7e50b3713845f00c2))
+* **listeners:** :bug: fix bump replies not being read properly ([d4b36c0](https://github.com/nikkoxd/stella/commit/d4b36c0cfd3cb40def13685b4efa2b6b28abcf60))
+* **listeners:** :bug: fix cooldowns ([5ca7e6d](https://github.com/nikkoxd/stella/commit/5ca7e6d3f7e6bff94dfa58e56dc6cd5b1dc344ee))
+* **listeners:** :bug: fix message listener using the wrong member ids ([685ba84](https://github.com/nikkoxd/stella/commit/685ba841ee9a0deeba9195827730f3e85396dfdc))
+* **listeners:** :bug: fix regex checking, don't check embeds on /up ([4af9fd8](https://github.com/nikkoxd/stella/commit/4af9fd8230a0fdc41adc4b658bc5aa6f79182cfd))
+* **listeners:** :bug: rewrite the logic for getting bump reply messages ([5ce80e3](https://github.com/nikkoxd/stella/commit/5ce80e3c78a3e12a3cfa9931f52c6d6087535151))
+* **listeners:** :bug: use GuildMember.edit to add roles on join ([b669f07](https://github.com/nikkoxd/stella/commit/b669f079359d3925ac26a0516e9d02440826b524))
+* **listeners:** :bug: use proper javascript regexp formatting ([8fa07ae](https://github.com/nikkoxd/stella/commit/8fa07ae8662811fbdba7ae42129f7ca772627aa7))
+* **listeners:** :loud_sound: add logs for testing ([5e0b9bc](https://github.com/nikkoxd/stella/commit/5e0b9bc9da5187d05bfde9845ef6e8904f872f70))
+* **listeners:** :loud_sound: add logs on every application command in bumps channel ([3b06f72](https://github.com/nikkoxd/stella/commit/3b06f725c003e435dc699a3bcfe827ffd2e261cd))
+
 ## [2.4.2](https://github.com/nikkoxd/stella/compare/v2.4.1...v2.4.2) (2024-04-22)
 
 
