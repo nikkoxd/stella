@@ -58,6 +58,8 @@ pub async fn event_handler(
             let user_id = new_message.author.id;
             let guild_id = new_message.guild_id;
 
+            tracing::info!("Interaction: {:?}", new_message.interaction_metadata);
+
             if new_message.author.bot || new_message.interaction_metadata.is_some() {
                 return Ok(());
             }
