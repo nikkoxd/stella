@@ -17,7 +17,6 @@ pub async fn ping(ctx: Context<'_>) -> Result<(), Error> {
     Ok(())
 }
 
-
 /// Register/unregister application commands
 #[poise::command(
     prefix_command,
@@ -158,6 +157,40 @@ pub async fn level(
         ctx.say(format!("**Уровень:** {level:?}\n**Опыт:** {exp:?}/{required_exp:?}")).await?;
     } else {
         ctx.say(format!("**Уровень:** 0\n**Опыт:** 0/{required_exp:?}")).await?;
+    }
+
+    Ok(())
+}
+
+/// Print current balance
+#[poise::command(
+    slash_command,
+    prefix_command,
+    name_localized("ru", "баланс"),
+    description_localized("ru", "Узнать баланс")
+)]
+pub async fn balance(
+    ctx: Context<'_>,
+    #[description = "Member to print the balance of"]
+    member: Option<serenity::User>
+) -> Result<(), Error> {
+    let mut member_id = ctx.author().id;
+
+    if let Some(member) = member {
+        member_id = member.id;
+    }
+
+    let row = sqlx::query("select balance from members where id = $1")
+        .bind(i64::from(member_id))
+        .fetch_optional(&ctx.data().pool)
+        .await;
+
+    if let Ok(Some(row)) = row {
+        let balance: i32 = row.try_get("balance").unwrap();
+
+        ctx.say(format!("**Баланс:** {balance:?}")).await?;
+    } else {
+        ctx.say(format!("**Баланс:** 0")).await?;
     }
 
     Ok(())
