@@ -46,6 +46,7 @@ async fn main(#[shuttle_shared_db::Postgres(
                 commands::level(),
                 commands::balance(),
                 commands::give(),
+                commands::set(),
             ],
             pre_command: |ctx| {
                 Box::pin(async move {
