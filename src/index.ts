@@ -14,6 +14,7 @@ import { error, log } from "./logger";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import Scheduler from "./scheduler";
 
 export const app = express();
 
@@ -75,6 +76,7 @@ async function init() {
 
     client.error = error;
     client.log = log;
+    client.scheduler = new Scheduler();
 
     await client.login(process.env.TOKEN);
     client.logger.info("Successfully connected to Discord API");
