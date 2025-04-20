@@ -11,7 +11,8 @@ WORKDIR /app
 
 # Set production environment
 ENV NODE_ENV="production"
-
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
 # Throw-away build stage to reduce size of final image
 FROM base as build
@@ -21,7 +22,7 @@ RUN apt-get update -qq && \
     apt-get install -y build-essential pkg-config python-is-python3
 
 # Install node modules
-RUN pnpm install
+RUN pnpm install --prod
 
 # Copy application code
 COPY --link . .
