@@ -38,8 +38,8 @@
   "scripts": {
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/attachments/* dist/",
-    "build": "yarn clean && tsc && yarn copy-files",
-    "dev": "NODE_ENV=development yarn start",
-    "start": "yarn build && node dist/index.js"
+    "build": "npm run clean && tsc && npm run copy-files",
+    "dev": "NODE_ENV=development npm run start",
+    "start": "npm run build && node dist/index.js"
   }
 }
