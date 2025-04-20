@@ -1,14 +1,11 @@
 import {
-  Guild as DiscordGuild,
-  GuildBasedChannel,
-  GuildChannel,
   Interaction,
   RepliableInteraction,
   TextChannel,
+  EmbedBuilder
 } from "discord.js";
 import Guild from "./schemas/Guild";
 import { client } from ".";
-import { EmbedBuilder } from "@discordjs/builders";
 import i18next from "i18next";
 
 export async function error(err: any, interaction: RepliableInteraction) {

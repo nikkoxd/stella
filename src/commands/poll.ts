@@ -134,7 +134,12 @@ export class pollCommand extends Subcommand {
           ephemeral: true,
         });
       } else {
-        const msg = await interaction.channel!.send(`📊 **${text}**`);
+        const channel = interaction.channel;
+
+        if (!channel) return;
+        if (!channel.isSendable()) return;
+
+        const msg = await channel.send(`📊 **${text}**`);
         msg.react(reactYes);
         msg.react(reactNo);
 

@@ -115,7 +115,9 @@ export class SendMessageCommand extends Command {
             files: attachments,
           });
         } else {
-          interaction.channel?.send({
+          if (!interaction.channel?.isSendable()) return;
+
+          interaction.channel.send({
             content: message.content,
             embeds: message.embeds,
             components: rows,

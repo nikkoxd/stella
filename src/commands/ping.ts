@@ -1,6 +1,5 @@
 import { Command } from "@sapphire/framework";
-import { isMessageInstance } from "@sapphire/discord.js-utilities";
-import { PermissionFlagsBits } from "discord.js";
+import { Message, PermissionFlagsBits } from "discord.js";
 import i18next from "i18next";
 
 export class PingCommand extends Command {
@@ -23,11 +22,11 @@ export class PingCommand extends Command {
     const msg = await interaction.reply({
       content: i18next.t("commands.ping.waiting"),
       ephemeral: true,
-      fetchReply: true,
+      withResponse: true,
     });
 
-    if (isMessageInstance(msg)) {
-      const diff = msg.createdTimestamp - interaction.createdTimestamp;
+    if (msg.interaction) {
+      const diff = msg.interaction.createdTimestamp - interaction.createdTimestamp;
       const ping = Math.round(this.container.client.ws.ping);
       // prettier-ignore
       return interaction.editReply(

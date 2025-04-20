@@ -35,7 +35,7 @@ export class messageCreateListener extends Listener {
   }
 
   private processPings(message: Message) {
-    if (message.content.includes("@everyone" || "@here")) {
+    if (message.content.includes("@everyone") || message.content.includes("@here")) {
       if (!message.member?.permissions.has(PermissionFlagsBits.MentionEveryone))
         message.react("🤡");
     }
@@ -125,6 +125,9 @@ export class messageCreateListener extends Listener {
         { memberId: message.author.id },
         { level: level + 1 },
       );
+
+      if (!message.channel.isSendable()) return;
+
       message.channel.send(
         `<@${message.author.id}> достиг ${level + 1} уровня!`,
       );
