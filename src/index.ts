@@ -40,7 +40,7 @@ export const client = new SapphireClient({
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildEmojisAndStickers,
+    GatewayIntentBits.GuildExpressions,
     GatewayIntentBits.GuildMessageReactions,
     GatewayIntentBits.GuildVoiceStates,
   ],
@@ -61,7 +61,7 @@ function i18nConfig(guild: IGuild) {
         loadPath: "./locales/{{lng}}/{{ns}}.json",
       },
     },
-    (err, t) => {
+    (err, _) => {
       if (err) return client.logger.error(err);
       client.logger.info("i18next is ready...");
     },
