@@ -31,7 +31,7 @@
     "copyfiles": "^2.4.1",
     "dotenv": "^16.4.5",
     "prettier": "3.2.5",
-    "release-please": "^16.10.2",
+    "release-please": "^17.1.0",
     "rimraf": "^5.0.7",
     "typescript": "^5.5.2"
   },
