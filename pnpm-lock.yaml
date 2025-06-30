@@ -70,8 +70,8 @@ importers:
         specifier: ^16.4.5
         version: 16.5.0
       prettier:
-        specifier: 3.2.5
-        version: 3.2.5
+        specifier: 3.6.2
+        version: 3.6.2
       release-please:
         specifier: ^16.10.2
         version: 16.18.0
@@ -1134,8 +1134,8 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
-  prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2629,7 +2629,7 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  prettier@3.2.5: {}
+  prettier@3.6.2: {}
 
   process-nextick-args@2.0.1: {}
 
